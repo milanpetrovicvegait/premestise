@@ -9,13 +9,17 @@ import HomePage from "./Components/Home/HomePage";
 import SuccessSubmitMessage from "./Components/Info/SuccessSubmitMessage";
 import ContactPage from "./Components/Info/ContactPage";
 import ErrorInfo from "./Components/Info/ErrorInfo";
+import CookieNotice from "./Components/Cookies/CookieNotice";
 import { BrowserRouter,  HashRouter, Route, Switch } from "react-router-dom";
+import useGaTracker from "./Components/Cookies/GaTracker";
 
 function App() {
+
+useGaTracker();
+
   return (
     <div>
-      <BrowserRouter>
-       
+      <BrowserRouter> 
         <Route path="/" exact component={HomePage} />
         <Route path="/verify"  component={EmailVerification} />
         <Route path="/confirm"   component={EmailConfirm} />
@@ -25,8 +29,8 @@ function App() {
         <Route path="/contact"   component={ContactPage} />
         <Route path="/success"   component={SuccessSubmitMessage} />
         <Route path="/error"   component={ErrorInfo} />
-      
       </BrowserRouter>
+      <CookieNotice />
     </div>
   );
 }
