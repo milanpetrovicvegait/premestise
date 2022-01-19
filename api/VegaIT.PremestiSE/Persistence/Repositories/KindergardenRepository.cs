@@ -6,7 +6,7 @@ using Persistence.Interfaces.Entites.Exceptions;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Net;
+
 namespace Persistence.Repositories
 {
     public class KindergardenRepository : IKindergardenRepository
@@ -15,9 +15,7 @@ namespace Persistence.Repositories
 
         public KindergardenRepository(IConfiguration config)
         {
-            
             _connString = config.GetConnectionString("DefaultConnection");
-
         }
 
         public List<Kindergarden> GetAll()
