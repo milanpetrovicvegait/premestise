@@ -25,7 +25,7 @@ class MoveRequestForm extends Component {
     Email: "",
     PhoneNumber: "",
     ChildBirthDate: null,
-    City: "Нови Сад",
+    City: "Novi Sad",
     Group: null,
     MoveFromLocationId: null,
     MoveToLocationId1: null,
