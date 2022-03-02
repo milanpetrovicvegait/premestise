@@ -43,7 +43,7 @@ namespace Core.Clients
 
         // ovo negde u config ili nesto
         private readonly string _circularTemplatePath = $"{Environment.CurrentDirectory}\\AppData\\circular.htm";
-        private readonly string _verifyTemplatePath = $"{Environment.CurrentDirectory}\\AppData\\verify.htm";
+        private readonly string _verificationTemplatePath = $"{Environment.CurrentDirectory}\\AppData\\verification.htm";
         private readonly string _matchTemplatePath = $"{Environment.CurrentDirectory}\\AppData\\index.htm";
         private readonly string _bannerPath = $"{Environment.CurrentDirectory}\\AppData\\images\\top-banner.jpg";
         private readonly string _footerPath = $"{Environment.CurrentDirectory}\\AppData\\images\\logo-footer.png";
@@ -110,20 +110,21 @@ namespace Core.Clients
             // Ako postoji drugi nacin da se slika stavi u email - izmenite
             // pokusao sam img src="http://localhost:50800/assets/images/..." ali nece u mail da stavi
 
-            using (StreamReader reader = new StreamReader(_verifyTemplatePath))
+            using (StreamReader reader = new StreamReader(_verificationTemplatePath))
             {
                 string mailText = reader.ReadToEnd();
                 var groupMapper = new AgeGroupMapper();
                 mailText = mailText.Replace("[[PARENT_NAME]]", request.ParentName);
                 mailText = mailText.Replace("[[CHILD_GROUP]]", groupMapper.mapGroupToText(request.Group));
                 mailText = mailText.Replace("[[PHONE_NUMBER]]", request.PhoneNumber);
+                mailText = mailText.Replace("[[EMAIL]]", request.Email);
                 mailText = mailText.Replace("[[URL_ENV]]", _environment);
-                mailText = mailText.Replace("[[FROM_KINDERGARDEN]]", $"- {fromKindergarden.Name}");
+                mailText = mailText.Replace("[[FROM_KINDERGARDEN]]", $"{fromKindergarden.Name}");
                 mailText = mailText.Replace("[[HASHED_ID]]", request.Id);
 
                 StringBuilder toKindergardensBuilder = new StringBuilder();
                 foreach (KindergardenDto wish in wishes)
-                    toKindergardensBuilder.Append($"- {wish.Name}<br>");
+                    toKindergardensBuilder.Append($"{wish.Name}<br>");
                 mailText = mailText.Replace("[[TO_KINDERGARDENS]]", toKindergardensBuilder.ToString());
 
                 AlternateView bannerImageAltView = new AlternateView(_bannerPath, MediaTypeNames.Image.Jpeg);
@@ -133,7 +134,6 @@ namespace Core.Clients
 
                 mailText = mailText.Replace("[[TOP_BANNER_LOGO_SRC]]", $"cid:{bannerImageAltView.ContentId}");
                 mailText = mailText.Replace("[[FOOTER_LOGO_SRC]]", $"cid:{footerImageAltView.ContentId}");
-
                 AlternateView messageAltView = AlternateView.CreateAlternateViewFromString(mailText, null, MediaTypeNames.Text.Html);
 
                 Send(request.Email, new List<AlternateView> { messageAltView, bannerImageAltView, footerImageAltView });
