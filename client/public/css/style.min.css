@@ -2038,6 +2038,17 @@ select {
   cursor: default;
 }
 
+.checkbox-label--main {
+  position: relative;
+  padding-left: 25px;
+}
+
+.checkbox-label--main input {
+  position: absolute;
+  top: -4px;
+  left: 0;
+}
+
 .nav__mobile {
   background-color: #fff;
   -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
@@ -2468,6 +2479,7 @@ select {
 
 .form-buttons .btn {
   padding: 13px 30px;
+  margin-top:40px;
 }
 
 .form-buttons .font-ico-envelope {
@@ -2483,6 +2495,10 @@ select {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-top: 30px;
+  }
+
+  .form-buttons .btn {
+    margin-top: 10px;
   }
 }
 

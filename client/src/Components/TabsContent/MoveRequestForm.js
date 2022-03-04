@@ -524,13 +524,13 @@ class MoveRequestForm extends Component {
                 </span>
                 <div className="mainPrivacyPolicyCheckBox">
                   <div style={ { display: 'flex', flexDirection: 'column'}} className="inline_block">
-                    <label for="privacy" className="checkbox-label">
+                    <label for="privacy" className="checkbox-label checkbox-label--main">
                       <input type="checkbox" name="privacy" className="checkBoxMiddleAlign" checked={this.state.privacyMainFormCheckbox} onClick={this.handlePrivacyMainFormChange}/>
-                        &nbsp;&nbsp;&nbsp;Pročitao/la sam i prihvatam Opšte uslove povezivanja roditelja uz pomoć veb-sajta „Premesti.se“ i Obaveštenje o obradi podataka o ličnosti
+                        Pročitao/la sam i prihvatam Opšte uslove povezivanja roditelja uz pomoć veb-sajta „Premesti.se“ i Obaveštenje o obradi podataka o ličnosti
                     </label>
-                    <label for="guardian" className="checkbox-label">
+                    <label for="guardian" className="checkbox-label checkbox-label--main">
                       <input type="checkbox" name="guardian" className="checkBoxMiddleAlign" checked={this.state.guardianMainFormCheckbox} onClick={this.handleGuardianMainFormChange}/>
-                      &nbsp;&nbsp;&nbsp;Potvrđujem da sam roditelj/staratelj deteta za koje se traži premeštanje
+                      Potvrđujem da sam roditelj/staratelj deteta za koje se traži premeštanje
                     </label>
                   </div>
                   <div>

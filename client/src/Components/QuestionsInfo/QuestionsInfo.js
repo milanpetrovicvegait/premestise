@@ -14,7 +14,7 @@ class QuestionsInfo extends Component {
              />
             <QuestionAccordion
              title="Kako radi ovaj sajt?" 
-             description="Popunjavanjem forme pristupa se sistemu i proverava se da li se vaša želja za premeštajem poklapa sa ostalim željama u sistemu. Ukoliko postoji poklapanje, na mejl ćete dobiti kontakt podatke drugog roditelja i potencijalno izvršiti zamenu. Ukoliko ne postoji trenutno poklapanje, čeka se da se poklapanje zahteva dogodi. Nakon povezivanja potrebno je da se svi učesnici međusobno kontaktiraju i koordinišu zajednički odlazak u nadležnu predškolsku ustanovu kako bi podneli Zahtev za premeštaj. Konačnu odluku o mogućnosti premeštaja donosi nadležna predškolska ustanova.
+             description="Popunjavanjem forme pristupa se sistemu i proverava se da li se vaša želja za premeštajem poklapa sa ostalim željama u sistemu. Ukoliko postoji poklapanje, na mejl ćete dobiti kontakt podatke drugog roditelja i potencijalno izvršiti zamenu. Ukoliko ne postoji trenutno poklapanje, čeka se da se poklapanje zahteva dogodi. <br/> Nakon povezivanja potrebno je da se svi učesnici međusobno kontaktiraju i koordinišu zajednički odlazak u nadležnu predškolsku ustanovu kako bi podneli Zahtev za premeštaj. Konačnu odluku o mogućnosti premeštaja donosi nadležna predškolska ustanova.
              " 
              />
             <QuestionAccordion
