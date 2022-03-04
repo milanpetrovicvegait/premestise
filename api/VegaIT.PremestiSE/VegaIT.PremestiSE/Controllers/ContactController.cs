@@ -34,7 +34,7 @@ namespace VegaIT.PremestiSE.Controllers
 
             try
             {
-                _mailClient.Send(form.Email, "Hvala sto ste nas kontaktirali, odgovoricemo Vam sto pre!");
+                _mailClient.Send(form.Email, "Hvala sto ste nas kontaktirali, odgovoricemo vam sto pre!");
                 _mailClient.Send(_config.GetValue<string>("SecondEmail"), form.Message);
             }
             catch (SmtpException ex)
