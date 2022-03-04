@@ -6,7 +6,7 @@ class ContactPage extends Component {
   render() {
 
     const headerMessage = "Hvala na kontaktu";
-    const mainMessage = "Uspešno ste poslali poruku, uskoro ćemo Vam odgovoriti.";
+    const mainMessage = "Uspešno ste poslali poruku, uskoro ćemo vam odgovoriti.";
     const goHomeMessage = "Vratite se na početnu stranicu";
     return (
       <React.Fragment>

@@ -5,7 +5,7 @@ import React, { Component } from "react";
 class SuccessSubmitMessage extends Component {
   render() {
     const headerMessage = "Hvala na kontaktu";
-    const mainMessage = "Uskoro ćete dobiti verifikacioni mejl koji morate potvrditi kako biste pristupili sistemu. Potvrđivanjem pristajete da sa učesnicima sa kojima se dogodi poklapanje razmenite vaš telefon i e-mail adresu.";
+    const mainMessage = "Uskoro ćete dobiti verifikacioni mejl koji morate potvrditi kako biste pristupili sistemu za pronalaženja zamene mesta u vrtiću. Potvrđivanjem pristajete da sa učesnicima sa kojima se dogodi poklapanje razmenite vaš telefon i e-mail adresu.";
     const goHomeMessage = "Vratite se na početnu stranicu";
 
     return (
