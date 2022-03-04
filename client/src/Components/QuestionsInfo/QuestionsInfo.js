@@ -1,5 +1,6 @@
 import QuestionAccordion from './QuestionAccordion';
 import React, { Component } from "react";
+import QuestionAccordionCookiePolicy from './QuestionAccordionCookiePolicy';
 class QuestionsInfo extends Component {
   render() {
     const questionSectionTitle = "Česta pitanja";
@@ -25,10 +26,7 @@ class QuestionsInfo extends Component {
              title="Koja je svrha ovog sajta?" 
              description="Da se lakše stupi u kontakt sa roditeljima koji žele da izvrše premeštaj dece iz jednog vrtića u drugi." 
              />
-            <QuestionAccordion
-             title="Koliko je sigurna moja privatnost?" 
-             description="Podaci koje ste uneli u sistem neće biti javno dostupni i služe samo za realizovanje ideje ove aplikacije. Sa obradom podataka se možete detaljnije upoznati kroz Politiku privatnosti" 
-             />
+            <QuestionAccordionCookiePolicy />
             <QuestionAccordion
              title="Ko je napravio ovaj sajt?" 
              description="Ovaj projekat je rezultat Code for a Cause akcije kompanije Vega IT sa ciljem rešavanja svakodnevnih problema u našem okruženju." 

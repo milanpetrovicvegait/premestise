@@ -14,7 +14,7 @@ class EmailVerification extends Component {
 
   render() {
     const emailVerified = this.props.emailVerified;
-    const successMessage = "Vas zahtev je ušao u sistem, obavestićemo Vas čim se dogodi poklapanje.";
+    const successMessage = "Uspešno ste izvršili verifikaciju. Vaš upit je ušao u sistem za pronalaženja zamene mesta u vrtiću. Kontaktiraćemo vas putem mejla čim pronađemo odgovarajuću zamenu.";
     const waitingMessage = "Verifikacija u toku";
 
     return (
